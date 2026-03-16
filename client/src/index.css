@@ -4,6 +4,11 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1440px;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -176,14 +181,14 @@
     min-width: 0;
   }
 
-  @media (min-width: 640px) {
+  @media (min-width: 768px) {
     .container {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1280px) {
     .container {
       padding-left: 2rem;
       padding-right: 2rem;
