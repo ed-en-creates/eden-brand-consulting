@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
-import Preloader from '@/components/Preloader';
-import HeroSection from '@/components/sections/HeroSection';
-import ServicesSection from '@/components/sections/ServicesSection';
-import PortfolioSection from '@/components/sections/PortfolioSection';
+import { useState, useEffect } from "react";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import Preloader from "@/components/Preloader";
+import HeroSection from "@/components/sections/HeroSection";
+import ServicesSection from "@/components/sections/ServicesSection";
+import PortfolioSection from "@/components/sections/PortfolioSection";
 
 /**
  * Home Page

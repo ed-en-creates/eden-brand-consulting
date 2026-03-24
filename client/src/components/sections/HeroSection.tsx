@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import { Link } from 'wouter';
-import { ArrowRight } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Link } from "wouter";
+import { ArrowRight } from "lucide-react";
 
 /**
  * Hero Section Component
@@ -10,7 +10,6 @@ import { ArrowRight } from 'lucide-react';
  */
 
 export default function HeroSection() {
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -41,16 +40,16 @@ export default function HeroSection() {
           variants={itemVariants}
           className="text-display text-foreground mb-6"
         >
-          Designing Modern Brands.{' '}
+          Designing Modern Brands.{" "}
           <span
             className="font-serif-italic"
             style={{
-              background: 'linear-gradient(90deg, #FFC49F, #9F9FFF, #FFC49F)',
-              backgroundSize: '200% auto',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              animation: 'gradient-sweep 3s linear infinite',
+              background: "linear-gradient(90deg, #FFC49F, #9F9FFF, #FFC49F)",
+              backgroundSize: "200% auto",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              animation: "gradient-sweep 3s linear infinite",
             }}
           >
             Building the Future with AI.

@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
-import { CheckCircle2, ArrowRight } from 'lucide-react';
-import { Link } from 'wouter';
+import { motion } from "framer-motion";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import { CheckCircle2, ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 
 /**
  * Services Page
@@ -14,46 +14,47 @@ import { Link } from 'wouter';
 export default function Services() {
   const services = [
     {
-      title: 'Brand Foundation',
-      description: 'Complete brand identity system for new and established businesses',
-      price: 'Custom',
+      title: "Brand Foundation",
+      description:
+        "Complete brand identity system for new and established businesses",
+      price: "Custom",
       items: [
-        'Brand identity design',
-        'Logo system & variations',
-        'Brand guidelines & standards',
-        'Color palette & typography',
-        'Launch website design',
-        'Brand strategy consultation',
+        "Brand identity design",
+        "Logo system & variations",
+        "Brand guidelines & standards",
+        "Color palette & typography",
+        "Launch website design",
+        "Brand strategy consultation",
       ],
-      icon: '✦',
+      icon: "✦",
     },
     {
-      title: 'Product & Growth Design',
-      description: 'Digital product design and growth-focused UX/UI solutions',
-      price: 'Custom',
+      title: "Product & Growth Design",
+      description: "Digital product design and growth-focused UX/UI solutions",
+      price: "Custom",
       items: [
-        'UX/UI design & prototyping',
-        'SaaS interface design',
-        'Landing page design',
-        'Design systems & components',
-        'User research & testing',
-        'Growth optimization',
+        "UX/UI design & prototyping",
+        "SaaS interface design",
+        "Landing page design",
+        "Design systems & components",
+        "User research & testing",
+        "Growth optimization",
       ],
-      icon: '◆',
+      icon: "◆",
     },
     {
-      title: 'AI Growth Package',
-      description: 'AI-powered solutions for business automation and growth',
-      price: 'Custom',
+      title: "AI Growth Package",
+      description: "AI-powered solutions for business automation and growth",
+      price: "Custom",
       items: [
-        'AI consulting & strategy',
-        'AI automation workflows',
-        'AI marketing tools',
-        'AI content generation',
-        'Implementation & training',
-        'Ongoing optimization',
+        "AI consulting & strategy",
+        "AI automation workflows",
+        "AI marketing tools",
+        "AI content generation",
+        "Implementation & training",
+        "Ongoing optimization",
       ],
-      icon: '●',
+      icon: "●",
     },
   ];
 
@@ -98,7 +99,7 @@ export default function Services() {
             animate="visible"
             className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24"
           >
-            {services.map((service) => (
+            {services.map(service => (
               <motion.div
                 key={service.title}
                 variants={cardVariants}
@@ -116,19 +117,19 @@ export default function Services() {
                   </motion.div>
 
                   {/* Title */}
-                  <h3 className="text-2xl font-medium mb-2">
-                    {service.title}
-                  </h3>
+                  <h3 className="text-2xl font-medium mb-2">{service.title}</h3>
 
                   {/* Description */}
-                  <p className="text-sm text-muted-foreground mb-6">{service.description}</p>
+                  <p className="text-sm text-muted-foreground mb-6">
+                    {service.description}
+                  </p>
 
                   {/* Price */}
                   <p className="text-lg font-medium mb-8">{service.price}</p>
 
                   {/* Items List */}
                   <ul className="space-y-3 mb-8 flex-grow">
-                    {service.items.map((item) => (
+                    {service.items.map(item => (
                       <motion.li
                         key={item}
                         initial={{ opacity: 0, x: -10 }}
@@ -141,7 +142,9 @@ export default function Services() {
                           size={18}
                           className="text-muted-foreground mt-0.5 flex-shrink-0 group-hover:text-foreground transition-colors duration-300"
                         />
-                        <span className="text-sm text-muted-foreground">{item}</span>
+                        <span className="text-sm text-muted-foreground">
+                          {item}
+                        </span>
                       </motion.li>
                     ))}
                   </ul>
@@ -171,10 +174,26 @@ export default function Services() {
             <h2 className="text-headline mb-12 text-center">Our Process</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               {[
-                { step: '01', title: 'Discovery', desc: 'Understanding your vision and goals' },
-                { step: '02', title: 'Strategy', desc: 'Developing comprehensive solutions' },
-                { step: '03', title: 'Execution', desc: 'Building and implementing designs' },
-                { step: '04', title: 'Optimization', desc: 'Testing and refining for success' },
+                {
+                  step: "01",
+                  title: "Discovery",
+                  desc: "Understanding your vision and goals",
+                },
+                {
+                  step: "02",
+                  title: "Strategy",
+                  desc: "Developing comprehensive solutions",
+                },
+                {
+                  step: "03",
+                  title: "Execution",
+                  desc: "Building and implementing designs",
+                },
+                {
+                  step: "04",
+                  title: "Optimization",
+                  desc: "Testing and refining for success",
+                },
               ].map((item, index) => (
                 <motion.div
                   key={item.step}
@@ -184,7 +203,9 @@ export default function Services() {
                   transition={{ delay: index * 0.1 }}
                   className="text-center"
                 >
-                  <p className="text-5xl font-medium text-muted-foreground opacity-50 mb-4">{item.step}</p>
+                  <p className="text-5xl font-medium text-muted-foreground opacity-50 mb-4">
+                    {item.step}
+                  </p>
                   <h3 className="text-lg font-medium mb-2">{item.title}</h3>
                   <p className="text-sm text-muted-foreground">{item.desc}</p>
                 </motion.div>

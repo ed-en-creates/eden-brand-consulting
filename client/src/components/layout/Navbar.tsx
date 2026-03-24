@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
-import { Link } from 'wouter';
-import { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon } from 'lucide-react';
-import { useTheme } from '@/contexts/ThemeContext';
+import { motion } from "framer-motion";
+import { Link } from "wouter";
+import { useState, useEffect } from "react";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import { useTheme } from "@/contexts/ThemeContext";
 
 /**
  * Navbar Component
@@ -18,12 +18,12 @@ export default function Navbar() {
   const { theme, setTheme } = useTheme();
 
   const navItems = [
-    { label: 'Home', href: '/' },
-    { label: 'Services', href: '/services' },
-    { label: 'Portfolio', href: '/portfolio' },
-    { label: 'AI Lab', href: '/ai-lab' },
-    { label: 'About', href: '/about' },
-    { label: 'Contact', href: '/contact' },
+    { label: "Home", href: "/" },
+    { label: "Services", href: "/services" },
+    { label: "Portfolio", href: "/portfolio" },
+    { label: "AI Lab", href: "/ai-lab" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
   ];
 
   const containerVariants = {
@@ -46,7 +46,7 @@ export default function Navbar() {
     <motion.nav
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
       className="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-border/10"
     >
       <div className="container flex items-center justify-between h-20">
@@ -72,7 +72,7 @@ export default function Navbar() {
           animate="visible"
           className="hidden md:flex items-center gap-8"
         >
-          {navItems.map((item) => (
+          {navItems.map(item => (
             <motion.div key={item.href} variants={itemVariants}>
               <Link href={item.href}>
                 <motion.span
@@ -80,9 +80,7 @@ export default function Navbar() {
                   className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors duration-300 relative group cursor-pointer inline-block"
                 >
                   {item.label}
-                  <motion.span
-                    className="absolute bottom-0 left-0 w-0 h-0.5 bg-foreground group-hover:w-full transition-all duration-300"
-                  />
+                  <motion.span className="absolute bottom-0 left-0 w-0 h-0.5 bg-foreground group-hover:w-full transition-all duration-300" />
                 </motion.span>
               </Link>
             </motion.div>
@@ -94,11 +92,11 @@ export default function Navbar() {
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="p-2 rounded-full border border-border/20 text-foreground hover:bg-foreground/10 transition-colors"
             aria-label="Toggle theme"
           >
-            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+            {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
           </motion.button>
           <Link href="/login">
             <motion.span
@@ -115,10 +113,10 @@ export default function Navbar() {
         <div className="md:hidden flex items-center gap-4">
           <motion.button
             whileTap={{ scale: 0.9 }}
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="text-foreground p-2"
           >
-            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+            {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
           </motion.button>
           <motion.button
             whileTap={{ scale: 0.9 }}
@@ -133,12 +131,12 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <motion.div
         initial={{ opacity: 0, height: 0 }}
-        animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? 'auto' : 0 }}
+        animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? "auto" : 0 }}
         transition={{ duration: 0.3 }}
         className="md:hidden overflow-hidden border-t border-border/10"
       >
         <div className="container py-4 flex flex-col gap-4 border-t border-border/10">
-          {navItems.map((item) => (
+          {navItems.map(item => (
             <Link key={item.href} href={item.href}>
               <motion.span
                 onClick={() => setIsOpen(false)}
