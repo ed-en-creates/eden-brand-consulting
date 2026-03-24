@@ -1,5 +1,5 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 
 /**
  * Preloader Component
@@ -18,7 +18,15 @@ export default function Preloader({ onComplete }: PreloaderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isExiting, setIsExiting] = useState(false);
 
-  const greetings = ['Hello', 'Bonjour', 'Ciao', 'Olá', 'やあ', 'Hallå', 'Guten Tag'];
+  const greetings = [
+    "Hello",
+    "Bonjour",
+    "Ciao",
+    "Olá",
+    "やあ",
+    "Hallå",
+    "Guten Tag",
+  ];
 
   useEffect(() => {
     if (currentIndex < greetings.length) {
@@ -45,14 +53,14 @@ export default function Preloader({ onComplete }: PreloaderProps) {
 
   const containerVariants = {
     initial: { y: 0 },
-    exit: { y: '-100%' },
+    exit: { y: "-100%" },
   };
 
   return (
     <motion.div
       variants={containerVariants}
       initial="initial"
-      animate={isExiting ? 'exit' : 'initial'}
+      animate={isExiting ? "exit" : "initial"}
       transition={{ duration: 0.8, ease: [0.34, 1.56, 0.64, 1] }}
       className="fixed inset-0 bg-black z-50 flex flex-col items-center justify-center overflow-hidden"
     >
@@ -68,7 +76,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
                 initial="initial"
                 animate="animate"
                 exit="exit"
-                transition={{ duration: 0.5, ease: 'easeInOut' }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="text-6xl md:text-7xl font-medium text-white text-center"
               >
                 {greetings[currentIndex]}

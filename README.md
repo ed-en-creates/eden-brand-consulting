@@ -29,12 +29,14 @@ A premium, interactive brand consulting website built with a modern tech stack. 
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/ed-en-creates/eden-brand-consulting.git
    cd eden-brand-consulting
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```

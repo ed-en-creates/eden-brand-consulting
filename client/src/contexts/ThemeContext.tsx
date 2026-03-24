@@ -49,7 +49,9 @@ export function ThemeProvider({
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme: handleSetTheme, switchable }}>
+    <ThemeContext.Provider
+      value={{ theme, setTheme: handleSetTheme, switchable }}
+    >
       {children}
     </ThemeContext.Provider>
   );

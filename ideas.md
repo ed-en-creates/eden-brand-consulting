@@ -5,6 +5,7 @@
 **Design Movement:** Swiss Design meets Digital Minimalism
 
 **Core Principles:**
+
 - Extreme whitespace utilization with intentional negative space
 - Geometric precision with clean, orthogonal layouts
 - Monochromatic foundation with strategic accent lighting
@@ -17,6 +18,7 @@ Pure black (#000000) as the primary, deep greys (#0a0a0a, #111111) as secondary 
 Asymmetric grid system with strategic breakpoints. Hero section uses full-width canvas with content positioned off-center. Services displayed as stacked cards with left-aligned text. Portfolio uses masonry-inspired irregular grid. Large breathing room between sections (120px+ gaps).
 
 **Signature Elements:**
+
 1. Thin geometric dividers (1px lines) that separate sections
 2. Subtle animated underlines on interactive elements
 3. Monospace accent text for technical details (AI, code-like references)
@@ -25,6 +27,7 @@ Asymmetric grid system with strategic breakpoints. Hero section uses full-width 
 Micro-interactions are invisible until needed. Hover states reveal subtle borders or slight elevation. Click feedback is minimal—a brief scale or opacity shift. All transitions use easing functions that feel "expensive" (cubic-bezier curves, not linear).
 
 **Animation:**
+
 - Page transitions: Fade in with staggered element reveals (100ms delays)
 - Card hovers: Subtle lift (2-4px) with soft shadow expansion
 - Text reveals: Letter-by-letter stagger on hero headline
@@ -40,6 +43,7 @@ Primary: Helvetica Neue Regular (400) for body, Medium (500) for emphasis. Secon
 **Design Movement:** Cyberpunk Minimalism with Film Industry Aesthetics
 
 **Core Principles:**
+
 - Cinematic framing with dramatic lighting and depth
 - Motion-first design where animations tell the story
 - Layered depth through overlapping semi-transparent elements
@@ -52,6 +56,7 @@ Black (#000000) as void, deep greys as dimensional layers. White (#ffffff) text 
 Cinematic aspect ratios (16:9) for hero and showcase sections. Overlapping layers create parallax depth. Content flows vertically like a film reel. Portfolio gallery uses full-screen image reveals with text overlays. Services presented as film credits—stacked, elegant, minimal.
 
 **Signature Elements:**
+
 1. Animated SVG dividers that curve and wave (inspired by film transitions)
 2. Glowing text accents that pulse subtly
 3. Layered semi-transparent overlays creating depth
@@ -60,6 +65,7 @@ Cinematic aspect ratios (16:9) for hero and showcase sections. Overlapping layer
 Every interaction feels like a scene transition. Hover states trigger cinematic reveals. Buttons feel like they're "activating" something. Feedback is visual and satisfying—not jarring, but clearly responsive.
 
 **Animation:**
+
 - Preloader: Multi-language text transitions with wave SVG animation, slides up to reveal hero
 - Hero: Canvas waves react to mouse movement, creating an interactive environment
 - Cards: Lift and glow on hover with shadow depth
@@ -76,6 +82,7 @@ Primary: Helvetica Neue Regular/Medium for clean, technical feel. Secondary: Ins
 **Design Movement:** Brutalist Architecture meets Digital Craft
 
 **Core Principles:**
+
 - Raw, honest design that celebrates structure
 - Exposed grid systems and visible alignment
 - Heavy use of typography as primary design element
@@ -88,6 +95,7 @@ Pure black (#000000) and deep greys create a concrete-like palette. White (#ffff
 Strict grid system with visible column guides. Content breaks the grid intentionally for emphasis. Large typography dominates. Services displayed as text-heavy blocks with minimal imagery. Portfolio uses grid gallery with consistent sizing. Generous padding and margins emphasize breathing room.
 
 **Signature Elements:**
+
 1. Bold typography used as graphic elements
 2. Visible grid lines and alignment guides (subtle)
 3. Raw, unpolished button designs with thick borders
@@ -96,6 +104,7 @@ Strict grid system with visible column guides. Content breaks the grid intention
 Interactions are direct and obvious. Hover states use color inversion or border emphasis. No smooth easing—interactions feel snappy and immediate. Feedback is visual and bold.
 
 **Animation:**
+
 - Page transitions: Quick fade with no easing
 - Card hovers: Border highlight and slight scale
 - Text reveals: Instant or very quick (no stagger)
@@ -112,12 +121,14 @@ Primary: Helvetica Neue Medium (500) for bold, structural feel. Secondary: Instr
 **CINEMATIC TECH NOIR** has been selected for Eden Brand Consulting.
 
 This approach perfectly captures the brief's requirements:
+
 - **Cinematic & Futuristic:** Inspired by film production UI and sci-fi aesthetics
 - **Premium & Polished:** Layered depth, sophisticated animations, and lighting effects
 - **Minimal & Architectural:** Clean layouts with intentional spacing and no clutter
 - **Motion-Driven:** Animations feel expensive and tell the brand story
 
 The design will leverage:
+
 - Dark mode exclusively with black and deep grey tones
 - Lighting effects instead of gradients (glows, halos, subtle shadows)
 - Cinematic preloader with multilingual text transitions

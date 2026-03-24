@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
-import { Link } from 'wouter';
-import { ArrowLeft } from 'lucide-react';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
+import { motion } from "framer-motion";
+import { Link } from "wouter";
+import { ArrowLeft } from "lucide-react";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 /**
  * NotFound Page (404)
@@ -23,7 +23,8 @@ export default function NotFound() {
             <h1 className="text-9xl font-medium text-white/20 mb-4">404</h1>
             <h2 className="text-headline text-white mb-4">Page Not Found</h2>
             <p className="text-subheading text-white/60 mb-12 max-w-md mx-auto">
-              The page you're looking for doesn't exist. Let's get you back on track.
+              The page you're looking for doesn't exist. Let's get you back on
+              track.
             </p>
 
             <Link href="/">

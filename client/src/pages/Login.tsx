@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
-import { Link } from 'wouter';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
-import { Lock, ArrowLeft } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Link } from "wouter";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import { Lock, ArrowLeft } from "lucide-react";
 
 /**
  * Login Page — Coming Soon placeholder
@@ -30,13 +30,12 @@ export default function Login() {
             Coming Soon
           </span>
 
-          <h1 className="text-headline text-foreground mb-4">
-            Client Portal
-          </h1>
+          <h1 className="text-headline text-foreground mb-4">Client Portal</h1>
 
           <p className="text-base text-muted-foreground leading-relaxed mb-10">
-            We're building a dedicated space where you'll be able to track your projects, 
-            access deliverables, and communicate with our team — all in one place.
+            We're building a dedicated space where you'll be able to track your
+            projects, access deliverables, and communicate with our team — all
+            in one place.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

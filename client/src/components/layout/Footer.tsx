@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import { Link } from 'wouter';
-import { ArrowUpRight, Instagram, Twitter, Dribbble } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Link } from "wouter";
+import { ArrowUpRight, Instagram, Twitter, Dribbble } from "lucide-react";
 
 /**
  * Footer Component
@@ -15,48 +15,52 @@ export default function Footer() {
 
   const footerSections = [
     {
-      title: 'Services',
+      title: "Services",
       links: [
-        { id: 'brand-design', label: 'Brand Design', href: '/services' },
-        { id: 'product-design', label: 'Product Design', href: '/services' },
-        { id: 'ai-integration', label: 'AI Integration', href: '/services' },
+        { id: "brand-design", label: "Brand Design", href: "/services" },
+        { id: "product-design", label: "Product Design", href: "/services" },
+        { id: "ai-integration", label: "AI Integration", href: "/services" },
       ],
     },
     {
-      title: 'Company',
+      title: "Company",
       links: [
-        { id: 'about', label: 'About', href: '/about' },
-        { id: 'portfolio', label: 'Portfolio', href: '/portfolio' },
-        { id: 'ai-lab', label: 'AI Lab', href: '/ai-lab' },
+        { id: "about", label: "About", href: "/about" },
+        { id: "portfolio", label: "Portfolio", href: "/portfolio" },
+        { id: "ai-lab", label: "AI Lab", href: "/ai-lab" },
       ],
     },
     {
-      title: 'Connect',
+      title: "Connect",
       links: [
-        { id: 'contact', label: 'Contact', href: '/contact' },
-        { id: 'newsletter', label: 'Newsletter', href: '/login' },
-        { id: 'email', label: 'edenbrandconsulting@gmail.com', href: 'mailto:edenbrandconsulting@gmail.com' },
+        { id: "contact", label: "Contact", href: "/contact" },
+        { id: "newsletter", label: "Newsletter", href: "/login" },
+        {
+          id: "email",
+          label: "edenbrandconsulting@gmail.com",
+          href: "mailto:edenbrandconsulting@gmail.com",
+        },
       ],
     },
   ];
 
   const socials = [
     {
-      id: 'instagram',
-      label: 'Instagram',
-      href: 'https://www.instagram.com/eden_brandconsulting/',
+      id: "instagram",
+      label: "Instagram",
+      href: "https://www.instagram.com/eden_brandconsulting/",
       icon: Instagram,
     },
     {
-      id: 'twitter',
-      label: 'X / Twitter',
-      href: 'https://x.com/eden_consult',
+      id: "twitter",
+      label: "X / Twitter",
+      href: "https://x.com/eden_consult",
       icon: Twitter,
     },
     {
-      id: 'dribbble',
-      label: 'Dribbble',
-      href: 'https://dribbble.com/confidencenkereuwem',
+      id: "dribbble",
+      label: "Dribbble",
+      href: "https://dribbble.com/confidencenkereuwem",
       icon: Dribbble,
     },
   ];
@@ -99,7 +103,7 @@ export default function Footer() {
             </p>
             {/* Social Links */}
             <div className="flex items-center gap-4">
-              {socials.map((social) => (
+              {socials.map(social => (
                 <motion.a
                   key={social.id}
                   href={social.href}
@@ -116,13 +120,13 @@ export default function Footer() {
           </motion.div>
 
           {/* Footer Sections */}
-          {footerSections.map((section) => (
+          {footerSections.map(section => (
             <motion.div key={section.title} variants={itemVariants}>
               <h4 className="text-sm font-medium text-foreground mb-6 uppercase tracking-wide">
                 {section.title}
               </h4>
               <ul className="space-y-3">
-                {section.links.map((link) => (
+                {section.links.map(link => (
                   <li key={link.id}>
                     <Link href={link.href}>
                       <motion.span

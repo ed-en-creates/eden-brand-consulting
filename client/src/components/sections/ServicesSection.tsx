@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import { CheckCircle2 } from 'lucide-react';
+import { motion } from "framer-motion";
+import { CheckCircle2 } from "lucide-react";
 
 /**
  * Services Section Component
@@ -12,37 +12,37 @@ import { CheckCircle2 } from 'lucide-react';
 export default function ServicesSection() {
   const services = [
     {
-      title: 'Brand Foundation',
-      description: 'Complete brand identity system',
+      title: "Brand Foundation",
+      description: "Complete brand identity system",
       items: [
-        'Brand identity design',
-        'Logo system',
-        'Brand guidelines',
-        'Launch website',
+        "Brand identity design",
+        "Logo system",
+        "Brand guidelines",
+        "Launch website",
       ],
-      icon: '✦',
+      icon: "✦",
     },
     {
-      title: 'Product & Growth Design',
-      description: 'Digital product excellence',
+      title: "Product & Growth Design",
+      description: "Digital product excellence",
       items: [
-        'UX/UI design',
-        'SaaS interface design',
-        'Landing page design',
-        'Design systems',
+        "UX/UI design",
+        "SaaS interface design",
+        "Landing page design",
+        "Design systems",
       ],
-      icon: '◆',
+      icon: "◆",
     },
     {
-      title: 'AI Growth Package',
-      description: 'AI-powered business solutions',
+      title: "AI Growth Package",
+      description: "AI-powered business solutions",
       items: [
-        'AI consulting',
-        'AI automation workflows',
-        'AI marketing tools',
-        'AI content generation',
+        "AI consulting",
+        "AI automation workflows",
+        "AI marketing tools",
+        "AI content generation",
       ],
-      icon: '●',
+      icon: "●",
     },
   ];
 
@@ -110,11 +110,13 @@ export default function ServicesSection() {
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-muted-foreground mb-6">{service.description}</p>
+                <p className="text-sm text-muted-foreground mb-6">
+                  {service.description}
+                </p>
 
                 {/* Items List */}
                 <ul className="space-y-3">
-                  {service.items.map((item) => (
+                  {service.items.map(item => (
                     <motion.li
                       key={item}
                       initial={{ opacity: 0, x: -10 }}

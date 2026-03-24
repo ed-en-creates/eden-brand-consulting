@@ -12,7 +12,7 @@ import AILab from "./pages/AILab";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
-
+import { Analytics } from "@vercel/analytics/react";
 
 function Router() {
   return (
@@ -39,10 +39,7 @@ function Router() {
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="dark"
-        switchable
-      >
+      <ThemeProvider defaultTheme="dark" switchable>
         <TooltipProvider>
           <Toaster />
           {/* Global Interactive Background */}
@@ -50,6 +47,7 @@ function App() {
           <div className="relative z-0 min-h-screen">
             <Router />
           </div>
+          <Analytics />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

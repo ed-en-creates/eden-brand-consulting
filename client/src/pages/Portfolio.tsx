@@ -1,8 +1,8 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
-import ProjectModal, { type Project } from '@/components/ui/ProjectModal';
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import ProjectModal, { type Project } from "@/components/ui/ProjectModal";
 
 /**
  * Portfolio Page
@@ -13,90 +13,161 @@ import ProjectModal, { type Project } from '@/components/ui/ProjectModal';
  */
 
 export default function Portfolio() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const categories = [
-    'All',
-    'Brand Identity',
-    'Fintech Branding',
-    'UI/UX Design',
-    'Web Design',
+    "All",
+    "Brand Identity",
+    "Fintech Branding",
+    "UI/UX Design",
+    "Web Design",
   ];
 
   const projects: Project[] = [
     {
       id: 1,
-      title: 'Brand Identity Concept Presentation',
-      category: 'Brand Identity',
-      image: 'https://cdn.dribbble.com/userupload/46328984/file/d308cc3480a8a6cbd042809c64579178.png',
-      description: 'Disclaimer: This is not the official branding for Enived — this is the product of deep research and deep work into Enived\'s brand pathway, but was not chosen as the official brand identity for the company.',
-      brief: 'Develop a bold, conceptual brand identity for Enived that communicates prestige and clarity through research-driven design.',
-      outcome: 'A stunning visual identity concept that showcased the strategic potential of the brand direction — complete with logo system, color palette, and presentation assets.',
-      tags: ['brand identity concepts', 'brand presentation', 'brand design', 'airline branding', 'logo', 'branding'],
-      dribbbleUrl: 'https://dribbble.com/confidencenkereuwem',
+      title: "Brand Identity Concept Presentation",
+      category: "Brand Identity",
+      image:
+        "https://cdn.dribbble.com/userupload/46328984/file/d308cc3480a8a6cbd042809c64579178.png",
+      description:
+        "Disclaimer: This is not the official branding for Enived — this is the product of deep research and deep work into Enived's brand pathway, but was not chosen as the official brand identity for the company.",
+      brief:
+        "Develop a bold, conceptual brand identity for Enived that communicates prestige and clarity through research-driven design.",
+      outcome:
+        "A stunning visual identity concept that showcased the strategic potential of the brand direction — complete with logo system, color palette, and presentation assets.",
+      tags: [
+        "brand identity concepts",
+        "brand presentation",
+        "brand design",
+        "airline branding",
+        "logo",
+        "branding",
+      ],
+      dribbbleUrl: "https://dribbble.com/confidencenkereuwem",
     },
     {
       id: 2,
-      title: 'Fluxa Pay Identity @ Eden',
-      category: 'Fintech Branding',
-      image: 'https://cdn.dribbble.com/userupload/45784443/file/6156bc93bbb44c38a07660a28be40c2c.jpg',
-      description: 'A modern fintech brand identity built at Eden BC for Fluxa Pay — a payment platform that needed to feel trustworthy, clean, and cutting-edge.',
-      brief: 'Design a complete visual identity for a fintech startup that balances credibility with modern aesthetics to appeal to a digitally-savvy audience.',
-      outcome: 'A clean, professional identity with a distinctive logo system, color palette, and brand assets that positioned Fluxa Pay for market entry.',
-      tags: ['visual identity', 'logo design', 'fintech branding', 'finance', 'brand identity', 'branding'],
-      dribbbleUrl: 'https://dribbble.com/confidencenkereuwem',
+      title: "Fluxa Pay Identity @ Eden",
+      category: "Fintech Branding",
+      image:
+        "https://cdn.dribbble.com/userupload/45784443/file/6156bc93bbb44c38a07660a28be40c2c.jpg",
+      description:
+        "A modern fintech brand identity built at Eden BC for Fluxa Pay — a payment platform that needed to feel trustworthy, clean, and cutting-edge.",
+      brief:
+        "Design a complete visual identity for a fintech startup that balances credibility with modern aesthetics to appeal to a digitally-savvy audience.",
+      outcome:
+        "A clean, professional identity with a distinctive logo system, color palette, and brand assets that positioned Fluxa Pay for market entry.",
+      tags: [
+        "visual identity",
+        "logo design",
+        "fintech branding",
+        "finance",
+        "brand identity",
+        "branding",
+      ],
+      dribbbleUrl: "https://dribbble.com/confidencenkereuwem",
     },
     {
       id: 3,
-      title: 'Fitness Branding for Breezifit',
-      category: 'Brand Identity',
-      image: 'https://cdn.dribbble.com/userupload/45114815/file/70b68fed8d3a57c66ce1c9019c2ab0f3.gif',
-      description: 'An energetic, animated brand identity system for Breezifit — a fitness and active lifestyle brand built for people who move.',
-      brief: 'Create a vibrant and dynamic brand identity for a fitness lifestyle brand targeting active, health-conscious individuals aged 18–35.',
-      outcome: 'A bold, high-energy identity featuring animated logo reveals, expressive typography, and a packaging design system that brings the brand to life.',
-      tags: ['lifestyle branding', 'packaging design', 'health wellness', 'sports branding', 'fitness', 'logo', 'branding'],
-      dribbbleUrl: 'https://dribbble.com/confidencenkereuwem',
+      title: "Fitness Branding for Breezifit",
+      category: "Brand Identity",
+      image:
+        "https://cdn.dribbble.com/userupload/45114815/file/70b68fed8d3a57c66ce1c9019c2ab0f3.gif",
+      description:
+        "An energetic, animated brand identity system for Breezifit — a fitness and active lifestyle brand built for people who move.",
+      brief:
+        "Create a vibrant and dynamic brand identity for a fitness lifestyle brand targeting active, health-conscious individuals aged 18–35.",
+      outcome:
+        "A bold, high-energy identity featuring animated logo reveals, expressive typography, and a packaging design system that brings the brand to life.",
+      tags: [
+        "lifestyle branding",
+        "packaging design",
+        "health wellness",
+        "sports branding",
+        "fitness",
+        "logo",
+        "branding",
+      ],
+      dribbbleUrl: "https://dribbble.com/confidencenkereuwem",
     },
     {
       id: 4,
-      title: 'WeThink Full Brand Identity Design',
-      category: 'Brand Identity',
-      image: 'https://cdn.dribbble.com/userupload/44578918/file/6808d7b16a76ab725e5d9cbbbf81d247.png',
-      description: 'Complete brand identity design for WeThink — a modern creative company with a visionary approach to collaborative thinking and innovation.',
-      brief: 'Build a full brand identity that communicates collaborative thinking, bold vision, and creative intelligence for a growing creative company.',
-      outcome: 'A comprehensive brand playbook including logo, color system, typography, and visual identity guidelines that gave WeThink a confident, distinctive voice.',
-      tags: ['brand launch', 'minimal design', 'color system', 'visionary branding', 'brand design', 'visual identity'],
-      dribbbleUrl: 'https://dribbble.com/confidencenkereuwem',
+      title: "WeThink Full Brand Identity Design",
+      category: "Brand Identity",
+      image:
+        "https://cdn.dribbble.com/userupload/44578918/file/6808d7b16a76ab725e5d9cbbbf81d247.png",
+      description:
+        "Complete brand identity design for WeThink — a modern creative company with a visionary approach to collaborative thinking and innovation.",
+      brief:
+        "Build a full brand identity that communicates collaborative thinking, bold vision, and creative intelligence for a growing creative company.",
+      outcome:
+        "A comprehensive brand playbook including logo, color system, typography, and visual identity guidelines that gave WeThink a confident, distinctive voice.",
+      tags: [
+        "brand launch",
+        "minimal design",
+        "color system",
+        "visionary branding",
+        "brand design",
+        "visual identity",
+      ],
+      dribbbleUrl: "https://dribbble.com/confidencenkereuwem",
     },
     {
       id: 5,
-      title: 'Neurochain — Skill Passport for Web3 & AI',
-      category: 'UI/UX Design',
-      image: 'https://cdn.dribbble.com/userupload/44326849/file/48a5d50a6ca8761df38c29d0537df135.png',
-      description: 'UX design for a Web3 and AI-powered skill passport platform — where users build verified, tokenized digital identities based on real-world skills.',
-      brief: 'Design an intuitive, trustworthy UX for a blockchain-based platform that helps freelancers and creators build and showcase verified skill portfolios.',
-      outcome: 'A sleek dashboard UI with clear information architecture, onboarding flows, and a verified credential system that made the complex feel simple and empowering.',
-      tags: ['web3', 'ux design', 'blockchain', 'b2b saas', 'skill passport', 'tokenized identity', 'freelancer tools', 'ai design'],
-      dribbbleUrl: 'https://dribbble.com/shots/26346396-Neurochain-Skill-Passport-UX-for-Web3-AI-Identity',
+      title: "Neurochain — Skill Passport for Web3 & AI",
+      category: "UI/UX Design",
+      image:
+        "https://cdn.dribbble.com/userupload/44326849/file/48a5d50a6ca8761df38c29d0537df135.png",
+      description:
+        "UX design for a Web3 and AI-powered skill passport platform — where users build verified, tokenized digital identities based on real-world skills.",
+      brief:
+        "Design an intuitive, trustworthy UX for a blockchain-based platform that helps freelancers and creators build and showcase verified skill portfolios.",
+      outcome:
+        "A sleek dashboard UI with clear information architecture, onboarding flows, and a verified credential system that made the complex feel simple and empowering.",
+      tags: [
+        "web3",
+        "ux design",
+        "blockchain",
+        "b2b saas",
+        "skill passport",
+        "tokenized identity",
+        "freelancer tools",
+        "ai design",
+      ],
+      dribbbleUrl:
+        "https://dribbble.com/shots/26346396-Neurochain-Skill-Passport-UX-for-Web3-AI-Identity",
     },
     {
       id: 6,
-      title: 'WeThink Website Design',
-      category: 'Web Design',
-      image: 'https://cdn.dribbble.com/userupload/44285077/file/944dd4ca49cf542590a99a4a32a018c2.png',
-      description: 'Hero banner screen for the WeThink website — featuring bold visual storytelling and a design system built for scale.',
-      brief: 'Design a striking web presence for WeThink that communicates their creative philosophy and draws visitors in from the very first screen.',
-      outcome: 'A bold, typographically-driven website with an immersive hero experience, consistent design system, and seamless responsive behavior.',
-      tags: ['responsive design', 'design system', 'typography', 'web design', 'ux design', 'ui', 'website design'],
-      dribbbleUrl: 'https://dribbble.com/confidencenkereuwem',
+      title: "WeThink Website Design",
+      category: "Web Design",
+      image:
+        "https://cdn.dribbble.com/userupload/44285077/file/944dd4ca49cf542590a99a4a32a018c2.png",
+      description:
+        "Hero banner screen for the WeThink website — featuring bold visual storytelling and a design system built for scale.",
+      brief:
+        "Design a striking web presence for WeThink that communicates their creative philosophy and draws visitors in from the very first screen.",
+      outcome:
+        "A bold, typographically-driven website with an immersive hero experience, consistent design system, and seamless responsive behavior.",
+      tags: [
+        "responsive design",
+        "design system",
+        "typography",
+        "web design",
+        "ux design",
+        "ui",
+        "website design",
+      ],
+      dribbbleUrl: "https://dribbble.com/confidencenkereuwem",
     },
   ];
 
   const filteredProjects =
-    selectedCategory === 'All'
+    selectedCategory === "All"
       ? projects
-      : projects.filter((p) => p.category === selectedCategory);
+      : projects.filter(p => p.category === selectedCategory);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -139,7 +210,7 @@ export default function Portfolio() {
             transition={{ delay: 0.2 }}
             className="flex flex-wrap justify-center gap-3 mb-12"
           >
-            {categories.map((category) => (
+            {categories.map(category => (
               <motion.button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
@@ -147,8 +218,8 @@ export default function Portfolio() {
                 whileTap={{ scale: 0.95 }}
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category
-                    ? 'bg-foreground text-background'
-                    : 'border border-border text-foreground hover:bg-foreground/10'
+                    ? "bg-foreground text-background"
+                    : "border border-border text-foreground hover:bg-foreground/10"
                 }`}
               >
                 {category}
@@ -165,7 +236,7 @@ export default function Portfolio() {
               animate="visible"
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
-              {filteredProjects.map((project) => (
+              {filteredProjects.map(project => (
                 <motion.div
                   key={project.id}
                   variants={itemVariants}

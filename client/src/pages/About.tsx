@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
-import { ArrowRight } from 'lucide-react';
-import { Link } from 'wouter';
+import { motion } from "framer-motion";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import { ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 
 /**
  * About Page
@@ -15,35 +15,36 @@ import { Link } from 'wouter';
 export default function About() {
   const teamMembers = [
     {
-      name: 'Nkereuwem Confidence',
-      role: 'Founder and Managing Director Eden BC in Nigeria',
-      image: '/confidence.png',
-      bio: 'Providing strategic leadership and brand direction from our Nigeria headquarters.',
+      name: "Nkereuwem Confidence",
+      role: "Founder and Managing Director Eden BC in Nigeria",
+      image: "/confidence.png",
+      bio: "Providing strategic leadership and brand direction from our Nigeria headquarters.",
     },
     {
-      name: 'Joann Kennedy',
-      role: 'Managing Director Eden BC in Liberia',
-      image: '/joann.png',
-      bio: 'Leading our operations and creative consulting efforts out of Liberia.',
+      name: "Joann Kennedy",
+      role: "Managing Director Eden BC in Liberia",
+      image: "/joann.png",
+      bio: "Leading our operations and creative consulting efforts out of Liberia.",
     },
   ];
 
   const values = [
     {
-      title: 'Innovation',
-      description: 'Pushing boundaries with cutting-edge design and technology',
+      title: "Innovation",
+      description: "Pushing boundaries with cutting-edge design and technology",
     },
     {
-      title: 'Excellence',
-      description: 'Delivering premium quality in every project and interaction',
+      title: "Excellence",
+      description:
+        "Delivering premium quality in every project and interaction",
     },
     {
-      title: 'Collaboration',
-      description: 'Working closely with clients to achieve their vision',
+      title: "Collaboration",
+      description: "Working closely with clients to achieve their vision",
     },
     {
-      title: 'Impact',
-      description: 'Creating solutions that drive real business growth',
+      title: "Impact",
+      description: "Creating solutions that drive real business growth",
     },
   ];
 
@@ -92,22 +93,25 @@ export default function About() {
             <h2 className="text-headline text-foreground mb-6">Our Story</h2>
             <div className="space-y-6 text-body text-foreground/80">
               <p>
-                Eden Brand Consulting was founded with a simple vision: to help businesses
-                build powerful brands and digital products in an increasingly AI-driven world.
+                Eden Brand Consulting was founded with a simple vision: to help
+                businesses build powerful brands and digital products in an
+                increasingly AI-driven world.
               </p>
               <p>
-                We believe that the future of design lies at the intersection of three
-                disciplines: strategic brand thinking, exceptional product design, and
-                intelligent automation through AI.
+                We believe that the future of design lies at the intersection of
+                three disciplines: strategic brand thinking, exceptional product
+                design, and intelligent automation through AI.
               </p>
               <p>
-                Our team combines decades of experience in brand identity, product design,
-                and artificial intelligence. We've worked with startups and Fortune 500
-                companies, always maintaining our commitment to excellence and innovation.
+                Our team combines decades of experience in brand identity,
+                product design, and artificial intelligence. We've worked with
+                startups and Fortune 500 companies, always maintaining our
+                commitment to excellence and innovation.
               </p>
               <p>
-                Today, Eden stands as a beacon for businesses seeking to transform their
-                brands and operations through thoughtful design and cutting-edge technology.
+                Today, Eden stands as a beacon for businesses seeking to
+                transform their brands and operations through thoughtful design
+                and cutting-edge technology.
               </p>
             </div>
           </motion.div>
@@ -120,7 +124,9 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="mb-24 border-t border-border pt-24"
           >
-            <h2 className="text-headline text-foreground mb-12 text-center">Our Values</h2>
+            <h2 className="text-headline text-foreground mb-12 text-center">
+              Our Values
+            </h2>
             <motion.div
               variants={containerVariants}
               initial="hidden"
@@ -128,14 +134,18 @@ export default function About() {
               viewport={{ once: true }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             >
-              {values.map((value) => (
+              {values.map(value => (
                 <motion.div
                   key={value.title}
                   variants={itemVariants}
                   className="p-6 rounded-lg border border-border bg-gradient-to-br from-foreground/5 to-transparent hover:from-foreground/10 hover:to-foreground/5 transition-all duration-300"
                 >
-                  <h3 className="text-lg font-medium text-foreground mb-3">{value.title}</h3>
-                  <p className="text-sm text-muted-foreground">{value.description}</p>
+                  <h3 className="text-lg font-medium text-foreground mb-3">
+                    {value.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {value.description}
+                  </p>
                 </motion.div>
               ))}
             </motion.div>
@@ -149,7 +159,9 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="border-t border-border pt-24"
           >
-            <h2 className="text-headline text-foreground mb-12 text-center">Our Team</h2>
+            <h2 className="text-headline text-foreground mb-12 text-center">
+              Our Team
+            </h2>
             <motion.div
               variants={containerVariants}
               initial="hidden"
@@ -157,7 +169,7 @@ export default function About() {
               viewport={{ once: true }}
               className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
             >
-              {teamMembers.map((member) => (
+              {teamMembers.map(member => (
                 <motion.div
                   key={member.name}
                   variants={itemVariants}
@@ -178,10 +190,14 @@ export default function About() {
                       transition={{ duration: 0.3 }}
                       className="absolute inset-0 bg-background/80 backdrop-blur-sm flex items-center justify-center"
                     >
-                      <p className="text-sm text-foreground text-center px-4">{member.bio}</p>
+                      <p className="text-sm text-foreground text-center px-4">
+                        {member.bio}
+                      </p>
                     </motion.div>
                   </div>
-                  <h3 className="text-lg font-medium text-foreground">{member.name}</h3>
+                  <h3 className="text-lg font-medium text-foreground">
+                    {member.name}
+                  </h3>
                   <p className="text-sm text-muted-foreground">{member.role}</p>
                 </motion.div>
               ))}

@@ -1,6 +1,6 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, ExternalLink, Tag } from 'lucide-react';
-import { useEffect } from 'react';
+import { motion, AnimatePresence } from "framer-motion";
+import { X, ExternalLink, Tag } from "lucide-react";
+import { useEffect } from "react";
 
 export interface Project {
   id: number;
@@ -23,20 +23,22 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
   // Close on Escape key
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === "Escape") onClose();
     };
-    window.addEventListener('keydown', handleKey);
-    return () => window.removeEventListener('keydown', handleKey);
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
   }, [onClose]);
 
   // Prevent scroll when open
   useEffect(() => {
     if (project) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     }
-    return () => { document.body.style.overflow = ''; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [project]);
 
   return (
@@ -58,9 +60,9 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             initial={{ opacity: 0, scale: 0.96, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.96, y: 20 }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
             className="relative z-10 w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-background border border-border rounded-2xl shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
+            onClick={e => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
@@ -114,7 +116,8 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                     The Brief
                   </h3>
                   <p className="text-sm text-foreground/80 leading-relaxed">
-                    {project.brief || 'A full brand identity project delivered through strategic research, creative direction, and meticulous visual execution.'}
+                    {project.brief ||
+                      "A full brand identity project delivered through strategic research, creative direction, and meticulous visual execution."}
                   </p>
                 </div>
 
@@ -124,7 +127,8 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                     About This Work
                   </h3>
                   <p className="text-sm text-foreground/80 leading-relaxed">
-                    {project.description || 'This project explores visual identity design at its finest — blending strategic thinking with bold creative execution.'}
+                    {project.description ||
+                      "This project explores visual identity design at its finest — blending strategic thinking with bold creative execution."}
                   </p>
                 </div>
 
@@ -134,7 +138,8 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                     The Outcome
                   </h3>
                   <p className="text-sm text-foreground/80 leading-relaxed">
-                    {project.outcome || 'A cohesive and distinctive visual identity that communicates brand values clearly and positions the client for long-term recognition.'}
+                    {project.outcome ||
+                      "A cohesive and distinctive visual identity that communicates brand values clearly and positions the client for long-term recognition."}
                   </p>
                 </div>
               </div>
@@ -149,7 +154,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                     </span>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
+                    {project.tags.map(tag => (
                       <span
                         key={tag}
                         className="px-3 py-1 rounded-full text-xs text-muted-foreground border border-border bg-foreground/5 hover:text-foreground transition-colors duration-200"
