@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://edenbrandconsulting.com/sitemap.xml
+Sitemap: https://eden-brand-consulting.vercel.app/sitemap.xml
